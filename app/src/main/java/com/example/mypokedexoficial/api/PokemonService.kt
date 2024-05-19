@@ -12,5 +12,5 @@ interface PokemonService {
     fun listPokemons(@Query("limit") limit: Int): Call<PokemonsApiResult>
 
     @GET("pokemon/{number}")
-    fun getPokemon(number: Int): Call<PokemonApiResult>
+    fun getPokemon(@Path("number")number: Int): Call<PokemonApiResult>
 }

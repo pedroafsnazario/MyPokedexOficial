@@ -5,6 +5,7 @@ data class Pokemon(
     val name: String,
     val types: List<PokemonType>
 ) {
+    val formattedName = name.capitalize()
 
     val formattedNumber = number.toString().padStart(3, '0')
 

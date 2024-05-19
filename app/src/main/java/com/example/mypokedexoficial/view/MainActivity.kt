@@ -44,7 +44,9 @@ class MainActivity : AppCompatActivity() {
         pokemonsApiResult?.results?.let {
 
             val pokemons: List<Pokemon?> = it.map {pokemonResult ->
-                val number = pokemonResult.url.replace("https://pokeapi.co/api/v2/pokemon/", "").toInt()
+                val number = pokemonResult.url
+                    .replace("https://pokeapi.co/api/v2/pokemon/", "")
+                    .replace("/", "").toInt()
 
                 val pokemonApiResult = PokemonRepository.getPokemon(number)
 
