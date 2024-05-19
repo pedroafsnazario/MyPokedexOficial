@@ -23,8 +23,8 @@ O aplicativo Pokédex foi criado com o objetivo de fornecer uma ferramenta útil
 ## Tecnologias Utilizadas
 
 - **Linguagem de Programação**: [Kotlin/Android]
-- **Frameworks**: n/a
-- **APIs**: Utiliza a API [nome da API] para obter informações sobre Pokémon.
+- **Frameworks**: [Glide] e [Retrofit]
+- **APIs**: Utilizado a API [PokeAPI] para obter informações sobre Pokémon.
 - **Ferramentas de Desenvolvimento**: [Android Studio]
 
 ## Aluno
