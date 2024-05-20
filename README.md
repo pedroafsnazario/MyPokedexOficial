@@ -11,21 +11,23 @@ Este é um aplicativo Pokédex desenvolvido como parte de um projeto para [Dev d
 
 ## Introdução
 
-O aplicativo Pokédex foi criado com o objetivo de fornecer uma ferramenta útil e interativa para fãs de Pokémon. Ele permite aos usuários procurar por qualquer Pokémon e obter informações detalhadas sobre eles.
+O aplicativo Pokédex foi criado com o simples intuito de apresentar todos os pokemons da primeira era (quando a franquia estava começando a bombar) num formato de lista, contendo o nome, numero e tipos de cada pokemon. O aplicativo também possuí interfaces para login, cadastro e um para apresentar os dados do usuario(Perfil)
 
 ## Funcionalidades
 
 - **Busca por Pokémon**: Permite ao usuário procurar por qualquer Pokémon por nome ou número.
-- **Informações Detalhadas**: Exibe detalhes como tipos, habilidades, estatísticas base e evoluções.
-- **Favoritos**: Possibilidade de marcar Pokémon como favoritos para acesso rápido.
 - **Interface Intuitiva**: Design amigável e fácil de usar.
 
 ## Tecnologias Utilizadas
 
 - **Linguagem de Programação**: [Kotlin/Android]
-- **Frameworks**: [Glide] e [Retrofit]
+- **Frameworks**: [Glide], [Retrofit], [RecyclerView] e [ViewModel]
 - **APIs**: Utilizado a API [PokeAPI] para obter informações sobre Pokémon.
 - **Ferramentas de Desenvolvimento**: [Android Studio]
 
 ## Aluno
-Desenvolvido por -> Pedro Antonio Fernandes dos Santos Nazário.
+Desenvolvido por -> 
+* Pedro Antonio Fernandes dos Santos Nazário
+* Bruno Feliciano
+
+
