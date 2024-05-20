@@ -78,21 +78,8 @@
                 android:textColor="#212121"
                 android:textSize="12sp"
                 tools:text="Fire" />
-        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/ivFavorite"
-            android:layout_width="47dp"
-            android:layout_height="46dp"
-            android:layout_gravity="end"
-            android:layout_margin="8dp"
-            android:layout_marginEnd="28dp"
-            android:contentDescription="Favorite Button"
-            android:src="@drawable/core"
-            app:layout_constraintBottom_toBottomOf="@id/ivPokemon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
