@@ -53,17 +53,16 @@ class Login : AppCompatActivity() {
         val userExists = databaseHelper.readUser(username, password)
         if(userExists){
             Toast.makeText(this, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ProfileActivity::class.java)
             intent.putExtra("username", username)
             intent.putExtra("password", password)
-            // Armazenar os dados do usuário nas SharedPreferences
-            saveUserCredentials(username, password)
             startActivity(intent)
             finish()
         }else{
             Toast.makeText(this, "Login falhou ;-;", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     private fun saveUserCredentials(username: String, password: String) {
         val sharedPref = getSharedPreferences("user_credentials", Context.MODE_PRIVATE)

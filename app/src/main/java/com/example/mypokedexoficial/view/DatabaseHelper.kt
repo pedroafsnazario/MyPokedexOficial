@@ -5,10 +5,10 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class DatabaseHelper( private val context: Context):
-    SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
+class DatabaseHelper(context: Context) :
+    SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
-    companion object{
+    companion object {
         private const val DATABASE_NAME = "UserDatabase.db"
         private const val DATABASE_VERSION = 1
         private const val TABLE_NAME = "data"
@@ -40,7 +40,7 @@ class DatabaseHelper( private val context: Context):
         return db.insert(TABLE_NAME, null, values)
     }
 
-    fun readUser(username: String, password: String): Boolean{
+    fun readUser(username: String, password: String): Boolean {
         val db = readableDatabase
         val selection = "$COLUMN_USERNAME = ? AND $COLUMN_PASSWORD = ?"
         val selectionArgs = arrayOf(username, password)
@@ -51,4 +51,15 @@ class DatabaseHelper( private val context: Context):
         return userExists
     }
 
+    fun updateUser(oldUsername: String, oldPassword: String, newUsername: String, newPassword: String): Boolean {
+        val db = writableDatabase
+        val values = ContentValues().apply {
+            put(COLUMN_USERNAME, newUsername)
+            put(COLUMN_PASSWORD, newPassword)
+        }
+        val whereClause = "$COLUMN_USERNAME = ? AND $COLUMN_PASSWORD = ?"
+        val whereArgs = arrayOf(oldUsername, oldPassword)
+        val result = db.update(TABLE_NAME, values, whereClause, whereArgs)
+        return result > 0
+    }
 }
