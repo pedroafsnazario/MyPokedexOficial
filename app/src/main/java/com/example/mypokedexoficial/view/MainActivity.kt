@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Button
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mypokedexoficial.R
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadRecyclerView(pokemons : List<Pokemon?>) {
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = PokemonAdapter(pokemons)
 
     }
